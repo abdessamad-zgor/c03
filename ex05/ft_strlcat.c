@@ -1,40 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: azgor <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/29 19:55:16 by azgor             #+#    #+#             */
-/*   Updated: 2025/07/31 00:58:56 by azgor            ###   ########.fr       */
+/*   Created: 2025/07/31 01:15:38 by azgor             #+#    #+#             */
+/*   Updated: 2025/07/31 01:40:04 by azgor            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-char	*ft_strstr(char *str, char *to_find)
+unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	int	i;
-	int	j;
-	int	lenhay;
+	int j;
+	int	lendest;
+	int lensrc;
 
 	i = 0;
-	lenhay = 0;
-	if (!to_find)
-		return (str);
-	while (to_find[lenhay])
-		lenhay++;
-	while (str[i])
-	{
-		j = 0;
-		while (str[i] == to_find[j] && j < lenhay)
-		{
-			i++;
-			j++;
-		}
-		if (lenhay == j)
-			return (&str[i - j]);
-		i++;
-	}
-	return (NULL);
+	j = 0;
+	lensrc = 0;
+	lendest = 0;
+	while (dest[lendest])
+		lendest++;
+	while (src[lensrc])
+		lensrc++;
+	while ()
 }
